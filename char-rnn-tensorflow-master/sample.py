@@ -46,5 +46,8 @@ def sample(args):
                                args.sample).encode('utf-8')
             print(data.decode("utf-8"))
 
+            with open("out.py","w") as f:
+                f.write(data.decode("utf-8").replace("\r\n","\n"))
+
 if __name__ == '__main__':
     sample(args)
